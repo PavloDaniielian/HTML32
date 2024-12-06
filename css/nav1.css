@@ -1,0 +1,83 @@
+/* General Styling */
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid\9;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+.navbar {
+  height: 19.3vh;
+  background-color: black;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+  padding-right: 20px;
+}
+.navbar .navbar-nav {
+  .nav-item {
+    margin-right: 20px; /* Adjust spacing as needed */
+  }
+  .nav-link { 
+    color: white;
+    transition: color 0.3s ease; /* Smooth animation */
+  }
+  .nav-link.active, .nav-link:hover { 
+    color: #a77d32;
+  }
+  .dropdown-menu {
+    background: #a77d32;
+  }
+  /* Ensure the "Our Portfolio" link remains #a77d32 when its submenu is hovered */
+  .nav-item.dropdown:hover > .nav-link {
+    color: #a77d32;
+  }
+  .nav-link {
+    position: relative;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 6px; /* Position the underline just below the text */
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background-color: #d9d9d9; /* Underline color */
+    transition: width 0.3s ease-in-out; /* Smooth animation */
+  }
+  .nav-link:hover::after, .dropdown:hover > .nav-link::after {
+    width: 100%; /* Extend the underline */
+  }
+
+  /* Open dropdown on hover */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  .dropdown-menu {
+    margin-top: 0; /* Prevent extra margin from Bootstrap */
+  }
+  .dropdown-menu .dropdown-item {
+    color: white;
+    background: none;
+  }
+  .dropdown-menu .dropdown-item:hover {
+    color: black;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 1000px) {
+  .navbar {
+    height: 5vh;
+  }
+  .offcanvas.offcanvas-end {
+      width: 220px; /* Adjust the width as needed */
+  }
+}
