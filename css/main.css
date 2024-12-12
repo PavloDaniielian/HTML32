@@ -1,27 +1,18 @@
 /* General Section Styling */
 body {
-  color: white;
-  background-color: black;
+  color: black;
+  background-color: white;
   text-align: center;
 }
 
 
-.mark-big {
-  display: block;
-  position: absolute;
-  top: 0;
-  text-align: left;
-  float: left;
-}
-.mark-big img {
-  max-width: 50vh;
-  position: absolute;
-}
-/* Mobile Styles */
-@media (max-width: 1000px) {
-  .mark-big img {
-    max-width: 50vw;
-  }
+.section0 {
+  background-image: url(../assets/images/mark.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+  margin: 5px 0;
+  height: 50px;
 }
 
 
