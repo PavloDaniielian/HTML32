@@ -1,96 +1,66 @@
 <!DOCTYPE html>
 <head>
-  <meta charset="utf-8">
-  <title>HTML32</title>
-  <meta name="description" content="Full-stack developr | HTML | CSS | JavaScript | PHP | React | Angular | ASP.NET | Mysql | PostgreSQL | MongoDB | C# | Unity | Labview | ReverseEngineering">
-  <meta name="author" content="Pavlo Daniielian | pdaniielian@gmail.com">
+    <meta charset="utf-8">
+    <title>HTML32</title>
+    
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <!-- Mobile Specific Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/icons/favicon.ico">
 
-  <!-- Favicons -->
-  <link rel="shortcut icon" href="assets/icons/favicon.ico">
+    <!-- Bootstrap on net -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-  <!-- Bootstrap on net -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Bootstrap on local -->
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script> -->
 
-  <!-- Bootstrap on local -->
-  <!-- <link href="css/bootstrap.min.css" rel="stylesheet">
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/jquery.min.js"></script> -->
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- FONTS -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <!-- help : https://github.com/locomotivemtl/locomotive-scroll?tab=readme-ov-file -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.3/dist/locomotive-scroll.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.3/dist/locomotive-scroll.min.js"></script>
-
-  <link rel='stylesheet' href='css/main.css'>
-  <script src="js/main.js"></script>
+    <!-- CSS -->
+    <link rel='stylesheet' href='css/nav1.css'>
+    <script src="js/nav1.js"></script>
+    <link rel='stylesheet' href='css/main.css'>
 </head>
 
 <body style="margin:0">
-  <main>
-    <section class="section-3">
-        P  11111111111
-    </section>
-    <section class="section-3">
-        P  11111111111
-    </section>
-    <section class="section-3">
-        P  11111111111
-    </section>
-    <section class="section-3">
-        P  11111111111
-    </section>
-    <section class="section-3">
-        P  11111111111
-    </section>
-    <section class="section-3">
-        P  11111111111
-    </section>
-  </main>
-  <div id="scroll-container" data-scroll-container>
-    <section class="section-1">
-      <div data-scroll data-scroll-class="is-inview">
-        2050 CLOUD BE A<BR>DREAM OR DISASTER
-      </div>
-      <div data-scroll data-scroll-speed="2" data-scroll-class="is-inview">
-        WE DARE TO DREAM BY
-      </div>
-      <div data-scroll data-scroll-speed="2" data-scroll-class="is-inview">
-        INVESTING IN SPACECADETS<BR>MARKETING THEIR MOONSHOTS
-      </div>
-    </section>
-    <section class="section-2">
-      <div data-scroll data-scroll-speed="3" data-scroll-class="is-inview">
-        P  2
-      </div>
-    </section>
-    <section class="section-3">
-      <div data-scroll data-scroll-speed="1" data-scroll-class="is-inview">
-        P  3
-      </div>
-    </section>
-    <section class="section-4">
-      <div data-scroll data-scroll-speed="2" data-scroll-class="is-inview">
-        P  4
-      </div>
-    </section>
-    <section class="section-5">
-      <div data-scroll data-scroll-speed="4" data-scroll-class="is-inview">
-        P  5
-      </div>
-    </section>
-  </div>
 
 </body>
 
 <script>
+    window.addEventListener('load', () => {
+        let element;
+        element = document.querySelector('.section1-title');
+        element.classList.add('loaded'); // Add the "loaded" class to trigger the fade-in
+
+        // let s = '';
+        // const width = window.innerWidth;  // Viewport width in pixels
+        // const height = window.innerHeight; // Viewport height in pixels
+        // s += width + "*" + height + "; " + (width / height).toFixed(2) + "; ";
+        // s += window.matchMedia("(max-width: 800px)").matches + "; "
+        // s += window.matchMedia("(aspect-ratio < 1)").matches + "; "
+        // s += window.matchMedia("(orientation: portrait)").matches + "; "
+        // document.getElementById("page-title").innerHTML = s;
+    });
+
+    function onHover_dropdownMenu(){
+        document.getElementById("page-title").innerHTML = "hover";
+    }
+    function onOver_dropdownMenu(){
+        document.getElementById("page-title").innerHTML = "hover";
+    }
+
+    // function applyEngishGuide(){
+    //     document.getElementById("text-guide").innerHTML = "A personal pocket-style guide that has been built for your with a mixture of fashion, science, and behaviour analysis to help you embrace your inner light and character to become unapologetically yourself.";
+    // }
+    // function applyUkrainianGuide(){
+    //     document.getElementById("text-guide").innerHTML = "Персональний кишеньковий гід, створений для вас, який поєднує моду, науку та аналіз поведінки, щоб допомогти вам прийняти своє внутрішнє світло і характер та стати впевненими у собі без жодних вибачень.";
+    // }
 </script>
 
 </html>
