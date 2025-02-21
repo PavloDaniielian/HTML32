@@ -5,23 +5,21 @@ body {
   text-align: center;
 }
 
-
 .section0 {
-  background-color: #a7db96;
-  padding: 20px 5vw;
-  /* Container for columns */
+  background-color: #a7db96; /* Green background */
+  padding: 20px 8vw;
 }
 
 .section0-cols-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 1vw;
+  gap: 3.5vw;
   justify-content: space-between;
 }
 
 .section0-col {
   flex: 1;
-  min-width: 200px;
+  min-width: 150px;
 }
 
 .section0-col-link {
@@ -29,272 +27,207 @@ body {
   text-decoration: none;
 }
 
-.section0-col-img1-container {
+.section0-col-box {
+  padding: 20px;
+  padding-left: 40px; /* Space for the number */
   position: relative;
+  background: #d2eeca; /* Default light green */
+  border-radius: 15px 0 0 15px; /* Rounded left side */
+  text-align: center;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Add spacing between number and text */
 }
 
-.section0-col-img1 {
-  width: 100%;
+/* Active state (default first item) */
+.section0-col-box.active {
+  background: white;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
 }
 
-.tab-no {
+/* Hover effect */
+.section0-col-box:hover {
+  background: white;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.section0-col-box::after {
+  content: "";
   position: absolute;
-  top: 50%;
-  left: 10%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 40px;
-  font-weight: bold;
-}
-
-.tab-title {
-  position: absolute;
-  top: 50%;
+  bottom: 10px; /* Adjust spacing from text */
   left: 50%;
-  transform: translate(-50%, -50%);
-  color: black;
-  font-size: 25px;
+  width: 80%;
+  height: 3px;
+  background: #ff66b2; /* Pink hover underline */
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.section0-col-box:hover::after {
+  transform: translateX(-50%) scaleX(1); /* Expand underline */
+}
+
+/* Step number circle */
+.tab-no {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Make the circle bigger */
+  height: 50px;
+  background: #a7db96; /* Green circle */
+  border-radius: 50%;
+  font-size: 28px;
   font-weight: bold;
+  color: #ffffff;
+  position: absolute;
+  left: -25px; /* Moves circle outward */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Small white circle inside the step number */
+.tab-no::after {
+  content: "";
+  display: block;
+  width: 75%; /* Increase size */
+  height: 75%;
+  background: transparent; /* Transparent inside */
+  border: 3px solid white; /* White border */
+  border-radius: 50%;
+  position: absolute;
+}
+
+/* Step title */
+.tab-title {
+  display: block;
+  color: black;
+  font-weight: bold;
+  font-size: 2.0vw;
+  line-height: 2.5vw;
+  text-align: center;
 }
 
 
 .section1 {
-  padding: 20px 0;
+  background-color: #f2f2f2; /* Light grey background */
+  padding: 40px 5vw;
+  text-align: center;
 }
 
-/* Container for columns */
-.section1-cols-container {
-  display: flex;
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
-  gap: 4.8vw; /* Adds spacing between boxes */
-  margin-left: 4.5vw;
-}
-
-/* Each column box */
-.section1-col {
-  flex: 1;
-  min-width: 400px;
-  box-sizing: border-box;
-}
-
-.section1-title {
-  margin: 30px 0;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 52px;
-  line-height: 67px;
-  text-align: left;
-  color: #FFFFFF;
-}
-
-.section1-title1 {
-  margin: 30px 0;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 60px;
-  text-align: left;
-  color: #A100FF;
-  text-transform: uppercase;
-}
-
-.section1-col-text {
-  margin: 30px 0;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 31px;
-  text-align: left;
-  color: white;
-}
-
-.section1-col-img1 {
-  width: 100%;
-}
-
-.text_ENA {
-  color: #A100FF;
-}
-
-.button_group {
-  margin: 30px 0;
-  text-align: left;
-}
-
-.button_normal {
-  margin-right: 20px;
-  background: black;
-  border: 3px solid #A100FF;
+/* Top Green Box */
+.section1-top {
+  background-color: #a7db96; /* Light green background */
   border-radius: 10px;
-  color: #A100FF;
-  display: inline-block;
-  text-decoration: none;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease; /* Smooth hover effect */
-  font-family: 'Pragati Narrow';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  letter-spacing: 0.08em;
-  text-align: center;
-}
-.button_normal:hover {
-  background: #A100FF;
-  color: white;
 }
 
-/* Mobile Styles: 1 column */
-@media (max-width: 1000px) {
-  .section1-cols-container {
-    flex-direction: column; /* Stack items vertically */
-  }
-  .section1-col {
-    min-width: 0;
-  }
-}
-
-
-.section5 {
-  background: black;
-  padding: 35px 4.5vw 35px 4.5vw;
-}
-
-/* Container for columns */
-.section5-cols-container {
+.section1-top-content {
   display: flex;
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
-  gap: 4.8vw; /* Adds spacing between boxes */
+  align-items: center;
+  gap: 10px;
 }
 
-/* Each column box */
-.section5-col {
-  flex: 1;
-  min-width: 400px;
-  box-sizing: border-box;
-}
-
-.section5-title {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 52px;
-  line-height: 67px;
-  text-align: left;
-  color: #FFFFFF;
-}
-
-.section5-col-text {
-  margin-top: 20px;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 31px;
-  text-align: left;
-  color: white;
-}
-
-.section5-col-img1 {
-  width: 100%;
-  padding: 30px 0 0 30px;
-}
-
-/* Mobile Styles: 1 column */
-@media (max-width: 1000px) {
-  .section5-cols-container {
-    flex-direction: column; /* Stack items vertically */
-  }
-  .section5-col {
-    min-width: 0;
-  }
-  .section5-col-img1 {
-    width: 100%;
-    padding: 0 0 0 0;
-  }
-}
-
-
-.section6 {
-  background: #d9d9d9;
-  padding-bottom: 60px;
-}
-
-.section6-back {
-  background: black;
-  height: calc(35px + 25vw);
-}
-
-.section6-img1 {
-  margin-top: -25vw;
-  width: 100%;
-  padding: 0 4.5vw 0 4.5vw;
-}
-
-.section6-title {
-  margin-top: 45px;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 31px;
-  line-height: 44px;
-  text-align: center;
-  color: #A77D32;
-  padding: 0 17vw;
-}
-
-.section6-text {
-  margin-top: 30px;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 31px;
-  text-align: center;
-  color: black;
-}
-
-.section6-text {
-  margin-top: 30px;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 31px;
-  text-align: center;
-  color: black;
-}
-
-.section6-subscript-container {
-  margin-top: 25px;
+.section1-check-icon {
+  background-color: white;
+  color: green;
+  font-size: 24px;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
   display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically if needed */
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
 }
 
-.section6-subscribe {
-  font-family: 'Poppins', sans-serif;
-  font-size: 18px;
-  background: #a77d32;
+.section1-top-text p {
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+  text-align: left;
+}
+
+/* Main Section */
+.section1-main {
+  background: linear-gradient(135deg, #004400, #228B22); /* Dark green gradient */
   color: white;
-  padding: 1px 1px 1px 15px;
-  border-radius: 5px;
-  display: inline-flex;
-  align-items: center; /* Vertically aligns content inside the box */
-  gap: 10px; /* Adds space between the text and input */
+  padding: 40px 5vw;
+  border-radius: 15px;
+  margin-top: 15px;
 }
 
-.section6-subscript-input {
-  padding: 8px;
+.section1-main h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section1-subtitle {
   font-size: 16px;
-  border: 1px solid #d9d9d9;
-  background: #d9d9d9;
-  border-radius: 3px;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
+
+.section1-desc {
+  font-size: 14px;
+  color: #f0f0f0;
+}
+
+/* Features Section */
+.section1-features {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.feature-box {
+  background: #e6ffe6; /* Light green */
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  background-color: green;
+  color: white;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+}
+
+.feature-box h3 {
+  font-size: 18px;
+  color: green;
+  font-weight: bold;
+}
+
+.discount {
+  font-size: 24px;
+  font-weight: bold;
+  color: green;
+}
+
+/* Footer */
+.section1-footer {
+  font-size: 14px;
+  margin-top: 20px;
+  color: #666;
+}
+
 
 
 .footer {
