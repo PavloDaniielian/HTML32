@@ -119,114 +119,156 @@ body {
 
 /* Top Green Box */
 .section1-top {
-  background-color: #a7db96; /* Light green background */
-  border-radius: 10px;
-  padding: 15px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .section1-top-content {
+  width: 50vw;
+  background: linear-gradient(to bottom, #a7db96 33%, white 33%);
+  border-radius: 10px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  padding: 15px;
 }
 
 .section1-check-icon {
+  margin-left: 15px;
   background-color: white;
-  color: green;
-  font-size: 24px;
-  font-weight: bold;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 10vw;
+  height: 10vw;
   border-radius: 8px;
 }
 
-.section1-top-text p {
-  font-size: 14px;
+.section1-check-icon img {
+  width: 100%;
+  height: auto;
+}
+
+.section1-top-text {
+  margin-left: 3vw;
+  text-align: center;
+}
+
+.section1-top-text1 {
+  font-size: 1.3vw;
   font-weight: bold;
   color: black;
-  margin: 0;
-  text-align: left;
+}
+
+.section1-top-text2 {
+  font-size: 1.7vw;
+  font-weight: bold;
+  color: black;
 }
 
 /* Main Section */
 .section1-main {
   background: linear-gradient(135deg, #004400, #228B22); /* Dark green gradient */
   color: white;
-  padding: 40px 5vw;
+  padding: 10vw 0 13vw 0;
   border-radius: 15px;
-  margin-top: 15px;
+  margin-top: -5vw;
 }
 
 .section1-main h1 {
-  font-size: 32px;
+  font-size: 7vw;
   font-weight: bold;
-  margin-bottom: 10px;
 }
 
 .section1-subtitle {
-  font-size: 16px;
+  margin-top: 2vw;
+  font-size: 2.1vw;
   font-weight: bold;
-  margin-bottom: 5px;
 }
 
 .section1-desc {
-  font-size: 14px;
-  color: #f0f0f0;
+  font-size: 1.8vw;
 }
 
 /* Features Section */
 .section1-features {
+  margin-top: -80px;
   display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+  justify-content: center; /* Center align all boxes */
+  gap: 4vw; /* Adds equal spacing */
+  padding: 0 10vw;
+  align-items: stretch; /* Ensures equal height */
 }
 
+/* Feature Box */
 .feature-box {
-  background: #e6ffe6; /* Light green */
+  background: white; /* Light green */
   padding: 20px;
+  border: 3px solid #bedcb2; /* White border */
   border-radius: 10px;
   width: 30%;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  /* Ensure equal height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
 }
 
+/* Feature Icon */
 .feature-icon {
   background-color: green;
-  color: white;
-  font-size: 24px;
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  margin: 0 auto 10px;
+  margin-bottom: 10px;
 }
 
+/* Ensure icon images scale properly */
+.feature-icon img {
+  width: 60%;
+  height: auto;
+}
+
+/* Centering Text inside feature-box */
+.feature-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  height: 60px; /* Ensures equal height for all feature text */
+  line-height: 1.4;
+  flex-grow: 1; /* Makes all p tags the same height */
+}
+
+/* Heading inside feature-box */
 .feature-box h3 {
-  font-size: 18px;
+  font-size: 40px;
   color: green;
   font-weight: bold;
+  margin-top: 10px;
 }
 
+/* Discount Number */
 .discount {
   font-size: 24px;
   font-weight: bold;
   color: green;
 }
 
+
+
 /* Footer */
 .section1-footer {
-  font-size: 14px;
+  font-size: 20px;
   margin-top: 20px;
   color: #666;
 }
+
 
 
 
