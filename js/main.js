@@ -10,3 +10,25 @@
 //     img.src = originalSrc; // Revert back to original image on mouse leave
 //   });
 // });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Select all .section0-col-link elements
+  const links = document.querySelectorAll(".section0-col-link");
+
+  links.forEach(link => {
+      link.addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default link behavior
+
+          // Remove 'active' class from all .section0-col-box elements
+          document.querySelectorAll(".section0-col-box").forEach(box => {
+              box.classList.remove("active");
+          });
+
+          // Add 'active' class to the clicked element's .section0-col-box
+          const box = this.querySelector(".section0-col-box");
+          if (box) {
+              box.classList.add("active");
+          }
+      });
+  });
+});
